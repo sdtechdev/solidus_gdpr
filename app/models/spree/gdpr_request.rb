@@ -2,7 +2,7 @@
 
 module Spree
   class GdprRequest < ApplicationRecord
-    enum intent: {
+    enum :intent, {
       data_restriction: 0,
       data_erasure: 1,
       data_export: 2,
