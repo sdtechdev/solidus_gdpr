@@ -8,6 +8,7 @@ RSpec.describe SolidusGdpr::DataExporter::AssembleArchive do
   let(:files) do
     {
       'profile.json' => 'profile export content',
+      'orders.json' => '[{"id":1}]',
     }
   end
 

@@ -16,7 +16,7 @@ module SolidusGdpr
 
         FileUtils.mkdir_p(base_path)
 
-        Zip::File.open(archive_path, Zip::File::CREATE) do |archive|
+        Zip::File.open(archive_path, create: true) do |archive|
           files.each_pair do |file_name, file_content|
             archive.get_output_stream(file_name) do |stream|
               stream.write(file_content)
